@@ -15,7 +15,8 @@ btnComenzar.addEventListener('click', () => {
 btnAdivinar.addEventListener('click', () => {
   let user = parseInt(document.getElementById('guessInput').value);
   if (user === numeroMagico) {
-    alert('Felicitaciones! Adivinaste el numero magico.');
+    alert('Felicitaciones! Adivinaste el numero magico. Juega nuevamente');
+    numeroMagico = Math.floor(Math.random() * 100) + 1;
   } else if (user < numeroMagico) {
     alert('Muy bajo! Intenta con un numero mas alto.');
   } else {
